@@ -1,11 +1,5 @@
 # SPSORC
 
-Spanish Extraction and Coordination Study - Replication of Abeille Experiment 4
-
-## Overview
-
-This experiment is a replication of Experiment 4 from Abeille's paper, adapted for Spanish. The study investigates extraction and coordination patterns in Spanish relative clauses using a self-paced reading paradigm with comprehension questions.
-
 ## Experiment Structure
 
 - **6 Latin Square Lists**: Each participant sees one of 6 lists, automatically assigned based on the counter
@@ -32,20 +26,4 @@ The experimental items test 6 conditions:
 - `data_includes/experiment_data.js` - All experimental items, fillers, and Latin square logic
 - `chunk_includes/intro_spanish.html` - Spanish consent form and participant information
 - `Experiment_Latin_Square_Lists.xlsx` - Source data with all 6 lists
-
-## Running the Experiment
-
-1. Upload to IbexFarm or run locally
-2. Open `experiment.html` in a browser
-3. The counter automatically assigns participants to lists 1-6 in rotation
-4. Each participant sees:
-   - Intro form (consent + demographics)
-   - 3 practice items
-   - 24 experimental items mixed with 34 fillers (randomized)
-
-## Notes
-
-- The experiment uses Ibex 0.3-beta syntax
-- Results are automatically saved through Ibex
-- The counter increments after each participant completes the experiment
 
