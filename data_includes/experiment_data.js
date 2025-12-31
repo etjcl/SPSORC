@@ -819,8 +819,10 @@ var items = [
   ["intro", "Form", {
       html: { include: "intro_spanish.html" },
       validators: {
-          age: function (s) { if (s.match(/^\d+$/)) return true; else return "Por favor ingresa un número válido para la edad"; },
-          native_lang: function (s) { if (s.trim().length > 0) return true; else return "Por favor indica tu idioma materno"; }
+          age: function (s) { if (s) return true; else return "Por favor selecciona un rango de edad"; },
+          native_lang: function (s) { if (s.trim().length > 0) return true; else return "Por favor indica el(los) idioma(s) que hablas"; },
+          spanish_native: function (s) { if (s) return true; else return "Por favor indica si el español es tu idioma materno"; },
+          spanish_regular: function (s) { if (s) return true; else return "Por favor indica si hablas español regularmente desde la infancia"; }
       }
   }]
 ];

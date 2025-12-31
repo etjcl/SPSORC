@@ -1,53 +1,96 @@
 <div style="width: 40em;">
 <p>
-Este experimento tiene dos partes. En la primera parte, deberás leer
-varias oraciones en español palabra por palabra. Puedes avanzar a la siguiente
-palabra presionando la barra espaciadora.
+<strong>Tarea de evaluación de oraciones</strong>
 </p>
 <p>
-Después de cada oración, a veces te harán una pregunta de comprensión sobre el contenido.
+Leerá algunas oraciones y le pediremos que evalúe la aceptabilidad de estas oraciones.
+Por favor, proporcione una calificación del 1 (si siente que la oración es poco natural o difícil de entender) al 7 (si siente que es muy natural y fácil de entender).
+Podrá modular sus respuestas dando calificaciones entre 1 y 7, siendo una calificación de 4 el punto medio que indica que una oración se juzga moderadamente aceptable.
+Por favor, intente usar toda la escala tanto como sea posible.
+Tenga cuidado: no le estamos preguntando qué tan creíble es una oración, sino qué tan aceptable es.
+Debe leer atentamente cada oración y preguntarse si es natural o no. Solo nos interesan sus intuiciones sobre el idioma; no hay respuestas correctas o incorrectas.
+Algunas oraciones irán seguidas de preguntas básicas de comprensión (sí/no).
 </p>
 <p>
-En la segunda parte, te pediremos que evalúes algunas oraciones
-en una escala del 1 al 7 (donde 1 es malo y 7 es bueno).
+Antes de que comience la tarea, tendrá un breve período de entrenamiento para familiarizarse con la tarea.
 </p>
 <p>
-Por favor, lee las instrucciones con atención y realiza el experimento en un lugar tranquilo.
+El experimento debería tomar entre 10 y 15 minutos.
 </p>
 
 <table>
 <tr>
-  <td>Nombre:</td><td><input name="name" type="text" size="30" class="obligatory" /></td>
+  <td>ID anónimo (para retirar datos):</td><td><input name="name" type="text" size="30" class="obligatory" /></td>
 </tr>
 <tr>
 <td colspan="2"><label class="error" for="name"></label></td>
 </tr>
 <tr>
-  <td>Edad:</td><td><input name="age" type="text" size="30" class="obligatory" /></td>
+  <td>Edad:</td><td>
+    <input name="age" type="radio" value="18-25" class="obligatory" id="age1" /><label for="age1"> 18-25 años </label><br/>
+    <input name="age" type="radio" value="26-36" id="age2" /><label for="age2"> 26-36 años </label><br/>
+    <input name="age" type="radio" value="37-47" id="age3" /><label for="age3"> 37-47 años </label><br/>
+    <input name="age" type="radio" value="48-59" id="age4" /><label for="age4"> 48-59 años </label><br/>
+    <input name="age" type="radio" value="60+" id="age5" /><label for="age5"> 60+ años </label>
+  </td>
 </tr>
 <tr>
 <td colspan="2"><label class="error" for="age"></label></td>
 </tr>
 <tr>
-  <td>Sexo:</td><td><input name="sex" type="radio" value="masculino" class="obligatory" id="csexmale" /><label for="csexmale"> Masculino </label>
-                   <input name="sex" type="radio" value="femenino" id="csexfemale"/><label for="csexfemale"> Femenino</label>
+  <td>Género:</td><td>
+    <input name="sex" type="radio" value="masculino" class="obligatory" id="csexmale" /><label for="csexmale"> Masculino </label>
+    <input name="sex" type="radio" value="femenino" id="csexfemale"/><label for="csexfemale"> Femenino</label>
+    <input name="sex" type="radio" value="otro" id="csexother"/><label for="csexother"> Otro</label>
+  </td>
 </tr>
 <tr>
 <td colspan="2"><label class="error" for="sex"></label></td>
 </tr>
 <tr>
-  <td>Idioma materno:</td><td><input name="native_lang" type="text" size="30" class="obligatory" placeholder="Español" /></td>
+  <td>Idioma(s) que habla:</td><td><input name="native_lang" type="text" size="30" class="obligatory" placeholder="Español" /></td>
 </tr>
 <tr>
 <td colspan="2"><label class="error" for="native_lang"></label></td>
 </tr>
 <tr>
-<td colspan="2" style="padding-bottom: 1em;"><input type="checkbox" class="obligatory" name="consent" id="consentcx" /><label for="consentcx"> Doy mi consentimiento para participar en este experimento</label></td>
+  <td>¿Es el español su idioma materno?</td><td>
+    <input name="spanish_native" type="radio" value="sí" class="obligatory" id="spanishyes" /><label for="spanishyes"> Sí </label>
+    <input name="spanish_native" type="radio" value="no" id="spanishno"/><label for="spanishno"> No</label>
+  </td>
+</tr>
+<tr>
+<td colspan="2"><label class="error" for="spanish_native"></label></td>
+</tr>
+<tr>
+  <td>¿Habla español regularmente y desde la infancia?</td><td>
+    <input name="spanish_regular" type="radio" value="sí" class="obligatory" id="spanishregyes" /><label for="spanishregyes"> Sí </label>
+    <input name="spanish_regular" type="radio" value="no" id="spanishregno"/><label for="spanishregno"> No</label>
+  </td>
+</tr>
+<tr>
+<td colspan="2"><label class="error" for="spanish_regular"></label></td>
+</tr>
+<tr>
+<td colspan="2" style="padding-top: 1em; padding-bottom: 1em;">
+Entiendo que mi participación en este estudio es voluntaria y que puedo retirar mis datos en cualquier momento (email de contacto: [email]). También entiendo que mis datos serán procesados de manera global y anónima con fines estadísticos, y que no serán enviados a terceros.
+</td>
+</tr>
+<tr>
+<td colspan="2" style="padding-bottom: 1em;"><input type="checkbox" class="obligatory" name="consent" id="consentcx" /><label for="consentcx"> Doy mi consentimiento</label></td>
 </tr>
 <tr>
 <td colspan="2">
 <label class="error" for="consent"></label>
 </td>
+</tr>
+<tr>
+  <td colspan="2">Comentarios (opcional):</td>
+</tr>
+<tr>
+  <td colspan="2">
+    <textarea name="comments" rows="5" cols="40"></textarea>
+  </td>
 </tr>
 </table>
 
